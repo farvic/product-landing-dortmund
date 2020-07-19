@@ -32,19 +32,23 @@ body::before {
 
 header {
     position: fixed;
-    top: 0;
+    top: -100px;
     min-height: 75px;
-    padding: 0px 20px;
-    width: 100%;
+    padding: 10px 20px;
+    padding-top: 5rem;
+    width: 105%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: start;
+    align-items: flex-end;
     background-color: #FDE100;
+    transform: rotate(-4.5deg);
+    margin-left: -12px;
 }
 
 #logo {
     width: 25vw;
     margin-right: 4rem;
+    transform: rotate(4.5deg);
 }
 
 a {
@@ -77,7 +81,17 @@ nav {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    margin-left: 10vw;
+    /* margin-left: 10vw; */
+}
+
+.nav-link {
+    padding: 10px 20px 20px 20px;
+    height: 40px;
+    font-size: 1em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    background: transparent;
+    cursor: pointer;
 }
 
 nav > ul {
@@ -88,7 +102,13 @@ nav > ul {
 }
 
 a:hover {
-    color: darkorange;
+    /* color: darkorange; */
+    color: #FDE100;
+    background-color: black;
+}
+
+li:hover {
+    background-color: black;
 }
 
 img {
