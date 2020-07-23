@@ -3,7 +3,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <!-- <script src="js/script.js"></script> -->
     <script src="https://kit.fontawesome.com/cd6d1ebcb0.js" crossorigin="anonymous"></script>
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+    <![endif]-->
     <title>BVB Landing Page</title>
 </head>
 <body>
@@ -16,10 +20,10 @@
             <nav id="nav-bar">
                 <ul>
                     <li>
-                        <a href="#main" class="nav-link">Support Dortmund</a>
+                        <a href="#features" class="nav-link">Why Dortmund</a>
                     </li>
                     <li>
-                        <a href="#infos" class="nav-link">Know Us</a>
+                        <a href="#goals" class="nav-link">Highlights</a>
                     </li>
                     <li>
                         <a href="#prices" class="nav-link">Prices</a>
@@ -27,7 +31,7 @@
                 </ul>
             </nav>
         </header>
-        <section id="main">
+        <section id="contact">
             <h2>Get in touch with us</h2>
             <form action="https://www.freecodecamp.com/email-submit">
                 <input name="email" id="email" type="email" placeholder="Enter your email address" required>
@@ -35,21 +39,47 @@
             </form>
         </section>
         <div id="container">
-            <section id="features">
+            <section id="reasons">
                 <div class="subsection">                        
-                    <div class="icon">
-                        <i class="fas fa-3x fa-futbol"></i>
+                    <div class="image">
+                        <img src="https://www.futebolnaveia.com.br/wp/wp-content/uploads/2020/01/Reus-Sancho-e-Haaland-em-goleada-do-Dortmund-e1579904119346.jpg" alt="Reus, Sancho and Haaland. Dortmund Players">
                     </div>
                     <div class="description">
-                        <h2>Ball</h2>
+                        <h2>Our players</h2>
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut at delectus corporis. Provident, eius rerum? Cum voluptates amet modi repellat.
+                            Our team is one of the best in Bundesliga. Dortmund's squad is known
+                            for being a mix of up-and-coming talent and consolidated players!
                         </p>
                     </div>
                 </div>
-                
+                <div class="subsection">
+                    <div class="description">
+                        <h2>Yellow Wall</h2>
+                        <p>
+                            Our supporters are among the most passionate in the world! The Yellow Wall strengthens our team and makes the adversary feel helpless.
+                            <br>
+                            <br>
+                            <em>“When the game starts and the south stand sings, it's something very special." - Norbert Dickel</em>
+                        </p>
+                    </div>
+                    <div class="image">
+                        <img src="https://images.beinsports.com/8fjj1RJ1-s1FRhw5A2KjGXuC-vs=/full-fit-in/1000x0/3205784-2020-02-18T200537Z_1410533185_RC283F9KAH7C_RTRMADP_3_SOCCER-CHAMPIONS-DOR-PSG-REPORT.jpg" alt="Yellow Wall, Dortmund's Supporters">
+                    </div>
+                </div>
+                <div class="subsection">
+                    <div class="image">
+                        <img src="https://b.fssta.com/uploads/content/dam/fsdigital/fscom/Soccer/images/2015/07/07/mascotsandlogos/070715-SOCCER-Mascots-and-Logos-SS-G1.vresize.1024.576.high.32.jpg" alt="Emma, Dortmund's Mascott">
+                    </div>
+                    <div class="description">
+                        <h2>Emma</h2>
+                        <p>
+                           It is impossible not to like Emma, our favorite bee!
+                           She is the most cheerful supporter in the league!
+                        </p>
+                    </div>
+                </div>
             </section>
-            <section id="infos">
+            <section id="goals">
                 <!-- <div id="rectangle"></div> -->
                 <iframe id="video" height="315" src="https://www.youtube-nocookie.com/embed/a9qwYyME29s?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
             </section>
