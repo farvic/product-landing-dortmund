@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'DINbold';
     src: url('/styles/fonts/din-condensed-bold.ttf');
@@ -23,10 +22,6 @@ body {
     font-size: 1.5rem;
 }
 
-head {
-}
-
-
 body::before {
     content: '';
     z-index: -1;
@@ -34,9 +29,6 @@ body::before {
     left: 0;
     height: 100%;
     width: 100%;
-    /* background: black; */
-    /* background-image:linear-gradient( -20deg,rgba(0, 0, 0, 0.5), rgba(253, 225, 0, 0.9) ),
-    url(https://img4.goodfon.com/wallpaper/nbig/c/c0/logo-wallpaper-borussia-dortmund-sport-football.jpg); */
     position: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -94,7 +86,6 @@ nav {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* margin-left: 10vw; */
 }
 
 .nav-link {
@@ -107,6 +98,12 @@ nav {
     cursor: pointer;
 }
 
+@media (max-width: 575.98px) {
+    .nav-link {
+        padding: 10px 20px 20px 20px;
+    }
+}
+
 nav ul {
     /* width: 35vw; */
     display: flex;
@@ -115,7 +112,6 @@ nav ul {
 }
 
 a:hover {
-    /* color: darkorange; */
     color: #FDE100;
     background-color: black;
 }
@@ -136,7 +132,7 @@ li:hover {
     background-color: #FDE100;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575.98px) {
     #header {
         transform: rotate(0deg);
     }
@@ -152,21 +148,18 @@ li:hover {
     }
 
     #nav-bar {
-        /* line-height: 2; */
         margin-top: -5vw;
     }
 
     nav ul {
-        width: 70vw;
+        width: auto;
         font-size: 0.9rem;
         margin-left: 20vw;
     }
 
-    .subsection {
-        flex-direction: column;
-    }
 }
 
+/* Main content */
 
 #container {
     margin: 0 auto;
@@ -176,6 +169,13 @@ li:hover {
 
 #container section {
     margin-top: 200px;
+    padding-top: 120px;
+}
+
+@media (max-width: 575.98px) {
+    #container section {
+        margin-top: 100px;
+    }
 }
 
 #contact {
@@ -185,7 +185,13 @@ li:hover {
     flex-direction: column;
     justify-content: center;
     height: 200px;
-    margin-top: 200px;
+    margin-top: 300px;
+}
+
+@media (max-width: 575.98px) {
+    #contact {
+        margin-top: 120px;
+    }
 }
 
 #contact h2 {
@@ -203,7 +209,6 @@ li:hover {
 
 input {
     font-weight: 600;
-    /* background-color: #FDE100; */
 }
 
 #submit {
@@ -233,8 +238,6 @@ input {
     cursor: pointer;
 }
 
-/* AQUI */
-
 #goals {
     margin-top: 50px;
     display: flex;
@@ -242,23 +245,22 @@ input {
 }
 
 iframe {
-    /* position: absolute;
-    z-index: 1; */
+    height: 315px;
     max-width: 560px;
     width: 100%;
 }
 
-/* #rectangle {
-    position: relative;
-    top: 115px;
-    z-index: 0;
-    width: 115%;
-    margin-left: -12px;
-    padding-right: 0px;
-    height: 100px;
-    background-color: #FDE100;
-    transform: rotate(-4.5deg);
-} */
+@media (max-width: 575.98px) {
+    #container section {
+        margin-top: 100px;
+        margin: 0 auto;
+        width: 98%;
+    }
+
+    iframe {
+        margin-top: 0px;
+    }
+}
 
 
 .subsection {
@@ -269,31 +271,52 @@ iframe {
     margin-bottom: 100px;
 }
 
-#container section {
-    padding-top: 120px;
+@keyframes opacity-animation {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
-/* #reasons {
-    display: grid;
-    grid-template-areas:    "photo description1"
-                            "description photo"
-                            "photo description";
-} */
+@keyframes up-animation {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
 
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes down-animation {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 
 #reasons .image {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* width: 20vw; */
     width: 100%;
     padding: 0;
     box-sizing: border-box;
+    animation: up-animation 3s ease-in;
 }
 
 #reasons img{
     width: 100%;
-    /* display: flex; */
+    display: flex;
     text-align: center;
     align-items: center;
     max-height: 265px;
@@ -301,20 +324,6 @@ iframe {
     background-color: #FDE100;
 }
 
-/* 
-
-
-@media (max-width: 550px) {
-    #reasons .image {
-      display: none;
-    }
-} */
-
-.description  h2 {
-    margin-bottom: 10px;
-}
-
-/*O erro foi corrigido mudando aqui*/
 #reasons .description {
     display: flex;
     flex-direction: column;
@@ -326,35 +335,67 @@ iframe {
     font-weight: 100;
     line-height: 150%;
     text-indent: 10%;
+    animation: down-animation 3s ease-in;
 }
 
-@media (max-width: 550px) {
-    #reasons .desc {
-      width: 100%;
-      text-align: center;
-      padding: 0;
-      height: 150px;
-    }
-}
-  
-  @media (max-width: 650px) {
-    #reasons {
-      margin-top: 0;
-    }
-}
 
-#how-it-works > iframe {
-    max-width: 560px;
-    width: 100%;
-}
+@media (max-width: 575.98px) {
+    #reasons .description {
+        justify-content: normal;
+        margin-top: 1.5rem;
+        width: 90vw;
+        font-size: 1.2rem;
+        text-indent: 0%;
+        padding: 0px;
+    }
+
+    .description h2 {
+        margin-bottom: 1rem;
+    }
+
+    .subsection {
+        flex-direction: column;
+    }
+
+    #img1 {
+        order: 1;
+    }
+
+    #desc1 {
+        order: 2;
+    }
+
+    #img2 {
+        order: 3;
+    }
+    
+    #desc2 {
+        order: 4;
+    }
+
+    #img3 {
+        order: 5;
+    }
+
+    #desc3 {
+        order: 6;
+        margin-bottom: -100px;
+    }
+
+    .subfinal {
+        margin-bottom: 0px;
+    }
+} 
+
+
+/* PRODUCTS */
 
 #prices {
-    margin-top: 160px; /*60px*/
+    margin-top: 160px;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-
 
 .product {
     display: flex;
@@ -363,6 +404,14 @@ iframe {
     text-align: center;
     width: calc(100% / 2);
     margin: 10px;
+}
+
+#home-kit {
+    animation: up-animation 2s ease-in 1s;
+}
+
+#away-kit {
+    animation: down-animation 2s ease-in 1s;
 }
 
 .product span {
